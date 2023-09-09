@@ -1,10 +1,9 @@
-export const Statistics = ({onGood, onNautral, onBad, totalFeedback, positiveFeedbackPer}) => {
+export const Statistics = ({good, neutral, bad, totalFeedback, positiveFeedbackPer}) => {
     return (
         <div>
-            <h1>Statistics</h1>
-            <p>Good: {onGood} </p>
-            <p>Neutral: {onNautral}</p>
-            <p>Bad: {onBad}</p>
+            <p>Good: {good} </p>
+            <p>Neutral: {neutral}</p>
+            <p>Bad: {bad}</p>
             <p>Total: {totalFeedback}</p>
             <p>Positive feedback: {positiveFeedbackPer}%</p>
         </div>

@@ -1,14 +1,13 @@
 import { Button, ButtonWrapp } from "./Feedback.styled"
 
-export const Feedback = ({onClickGood, onClickNeutral, onClickBad}) => {
+export const Feedback = ({onLeaveFeedback, options}) => {
     return (
-        <div>
-            <h1>Please leave feedback</h1>
             <ButtonWrapp>
-                <Button onClick={onClickGood}>Good</Button>
-                <Button onClick= {onClickNeutral}>Neutral</Button>
-                <Button onClick={onClickBad}>Bad</Button>
+                {options.map((option) => (
+                <Button key={option} onClick={() => onLeaveFeedback(option)}>
+                 {option.toUpperCase()}
+                </Button>
+                ))}
             </ButtonWrapp>
-        </div>
     )
 }
