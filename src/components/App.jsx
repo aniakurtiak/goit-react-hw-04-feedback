@@ -27,7 +27,21 @@ handlerClickBad = () => {
   }))
 };
 
+countTotalFeedback = () => {
+const {good, neutral, bad} = this.state;
+return good + neutral + bad;
+};
+
+countPositiveFeedbackPercentage = () => {
+  const {good} = this.state;
+  return (good * 100);
+};
+
+
   render () {
+const total = this.countTotalFeedback();
+const positiveFeedbackPer = Math.round(this.countPositiveFeedbackPercentage() / total);
+
     return (
       <div>
         <Feedback 
@@ -39,6 +53,8 @@ handlerClickBad = () => {
         onGood = {this.state.good}
         onNautral = {this.state.neutral}
         onBad = {this.state.bad}
+        totalFeedback = {total}
+        positiveFeedbackPer = {positiveFeedbackPer}
         />
       </div>
     );
