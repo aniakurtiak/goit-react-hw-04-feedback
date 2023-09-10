@@ -1,4 +1,7 @@
 import styled from 'styled-components';
 
-export const Section = styled.div`
+export const SectionWrap = styled.div`
+max-width: 1200px;
+margin: 0 auto;
+padding: 10px 15px;
 `;

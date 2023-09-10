@@ -1,6 +1,8 @@
+import { SectionWrap} from "./Section.styled"
+
 export const Section = ({title, children}) => (
-    <section>
+    <SectionWrap>
         <h2>{title}</h2>
         {children}
-    </section>
+    </SectionWrap>
 );
